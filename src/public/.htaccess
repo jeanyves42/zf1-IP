@@ -1,0 +1,15 @@
+#On initialise la variable d'environnement à dévelopment avec SetEnv
+SetEnv APPLICATION_ENV development
+
+#On redéfinit la valeur de display_errors pour les afficher
+php_value display_errors 1
+
+<IfModule mod_rewrite.c>
+	Options +FollowSymlinks -MultiViews
+	RewriteEngine On
+	
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteRule .* index.php [L]
+</IfModule>

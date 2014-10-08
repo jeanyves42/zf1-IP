@@ -1,0 +1,8 @@
+<h1>Liste des <?= count($this->actors) ?> premiers acteurs</h1>
+<?php foreach($this->actors as $actor) : ?>
+    <h4>
+        #<?= $actor->getActorId() ?> - <a href="/actor/actor/actorid/<?= $actor->getActorId() ?>"><?= $actor->getFirstName() ?> <?= $actor->getLastName() ?></a>
+    </h4>
+<?php endforeach?>
+<hr>
+<p><a href="/">Retour à l'index</a></p>

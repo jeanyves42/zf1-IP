@@ -1,0 +1,7 @@
+<h1>Liste des <?= count($this->films) ?> premiers films</h1>
+<?php foreach($this->films as $film) : ?>
+    <h4>#<?= $film->getFilmId() ?> - <a href="/film/film/filmid/<?= $film->getFilmId() ?>"><?= $film->getTitle() ?></a></h4>
+    <!-- <p><a href="/film/delete/filmid/<?= $film->getFilmId() ?>">Supprimer le film</a></p> -->
+<?php endforeach?>
+<hr>
+<p><a href="/">Retour à l'index</a></p>

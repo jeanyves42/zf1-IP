@@ -3,3 +3,8 @@
 /.buildpath
 /.project
 /composer.lock
+/world_innodb.sql
+/sakila-db/
+/.bowerrc
+/bower.json
+/composer.json

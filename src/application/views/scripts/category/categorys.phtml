@@ -1,0 +1,8 @@
+<h1>Liste des <?= count($this->categorys) ?> catégories</h1>
+<?php foreach($this->categorys as $category) : ?>
+    <h4>
+        #<?= $category->getCategoryId() ?> - <a href="/category/category/categoryid/<?= $category->getCategoryId() ?>"><?= $category->getName() ?></a>
+    </h4>
+<?php endforeach?>
+<hr>
+<p><a href="/">Retour à l'index</a></p>

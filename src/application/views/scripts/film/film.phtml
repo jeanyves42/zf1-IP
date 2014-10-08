@@ -1,0 +1,23 @@
+<h1>Détails du film</h1>
+
+<h2><?= $this->film->getTitle() ?></h2>
+<p><?= $this->film->getDescription() ?></p>
+
+<h3>Catégories</h3>
+<ul>
+<?php 
+$categories = $this->film->getCategories();
+foreach ($categories as $category) : ?>
+<li><?= $category->getName() ?></li>
+<?php endforeach;?>
+</ul>
+
+<h3>Acteurs</h3>
+<?php 
+$actors = $this->film->getActors();
+foreach ($actors as $actor) : ?>
+<li><a href="/actor/actor/actorid/<?= $actor->getActorId() ?>"><?= $actor->getFirstName() ?> <?= $actor->getLastName() ?></a></li>
+<?php endforeach;?>
+
+<hr>
+<p><a href="/film/films/">Retour à la liste des films</a></p>

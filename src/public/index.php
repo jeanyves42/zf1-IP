@@ -4,6 +4,7 @@ define('DS', DIRECTORY_SEPARATOR);
 define('ROOT_PATH', dirname(dirname(__DIR__)));
 define('SRC_PATH', ROOT_PATH . DS . 'src');
 define('PUBLIC_PATH', SRC_PATH . DS . 'public');
+define('ASSETS_PATH', PUBLIC_PATH . DS . 'assets');
 define('APPLICATION_PATH', SRC_PATH . DS . 'application');
 define('CONFIG_PATH', APPLICATION_PATH . DS . 'configs');
 

@@ -1,6 +1,5 @@
 /.settings/
 /.vagrant/
-/vendor/
 /.buildpath
 /.project
 /composer.lock

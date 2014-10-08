@@ -1,1 +1,10 @@
-<h1>Index</h1>
+<h1><?= $this->film1->getTitle() ?></h1>
+<p><?= $this->film1->getDescription() ?></p>
+<p>Dernière mise à jour : <?= date('d/m/Y', strtotime($this->film1->getLastUpdate())) ?>
+
+<h1>Liste des <?= count($this->films) ?> derniers films</h1>
+<ul>
+    <?php foreach($this->films as $film) : ?>
+    <li><?= $film->getTitle() ?> - <?= date('d/m/Y', strtotime($film->getLastUpdate())) ?></li>
+    <?php endforeach?>
+</ul>
